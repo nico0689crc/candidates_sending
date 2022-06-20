@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Point of contacts</h1>
+
+<div id="point_of_contacts">
+  <% @presenter.point_of_contacts.each do |point_of_contact| %>
+    <%= render point_of_contact %>
+    <p>
+      <%= link_to "Show this point of contact", admin_point_of_contact_path(point_of_contact) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New point of contact", new_admin_point_of_contact_path %>
