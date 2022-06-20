@@ -1,0 +1,7 @@
+docker-compose run --no-deps web rails new . --force --database=postgresql
+docker-compose build
+docker-compose up
+docker-compose down -v
+
+
+rails generate migration AddPartNumberToProducts
