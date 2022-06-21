@@ -127,3 +127,25 @@ PipelineStep.create([{
     order: 4,
     job_id: 3
 }])
+
+Candidate.create([{
+    first_name: "Carlos",
+    last_name: "Burgess",
+    contact_email: "nulo@kehhi.am",
+    contact_linked_in: "http://ek.gt/zuwaj"
+},{
+    first_name: "Warren",
+    last_name: "Dunn",
+    contact_email: "ges@za.mp",
+    contact_linked_in: "http://lahpojow.sk/kukgajbeb"
+},{
+    first_name: "Calvin",
+    last_name: "Lindsey",
+    contact_email: "zevunij@mamordod.sd",
+    contact_linked_in: "http://dabmah.sk/pi"
+},{
+    first_name: "Lily",
+    last_name: "Coleman",
+    contact_email: "lifkuf@putupbec.am",
+    contact_linked_in: "http://togfokej.gov/op"
+},])
