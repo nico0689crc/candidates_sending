@@ -1,6 +1,6 @@
 class Job < ApplicationRecord
   #--------------------------------------------- RELATIONSHIPS
-  belongs_to :point_of_contact
+  belongs_to :recruiter
   has_many :pipeline_steps
   #--------------------------------------------- VALIDATIONS
   validates :title, presence: true, length: { minimum: 10 }

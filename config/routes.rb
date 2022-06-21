@@ -4,14 +4,14 @@ Rails.application.routes.draw do
 namespace :admin do
     namespace :api, defaults: {format: :json} do
       namespace :v1 do
-        resources :point_of_contacts
+        resources :recruiters
         resources :jobs
         resources :pipeline_steps
         resources :candidates
       end
     end
 
-    resources :point_of_contacts
+    resources :recruiters
     resources :jobs
     resources :pipeline_steps
     resources :candidates
