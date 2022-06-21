@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @recruiter %>
+
+<div>
+  <%= link_to "Edit this recruiter", edit_admin_recruiter_path(@recruiter) %> |
+  <%= link_to "Back to recruiters", admin_recruiters_path %>
+
+  <%= button_to "Destroy this recruiter",admin_recruiter_path(@recruiter), method: :delete %>
+</div>

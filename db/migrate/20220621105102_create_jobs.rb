@@ -5,7 +5,7 @@ class CreateJobs < ActiveRecord::Migration[7.0]
       t.text :description, null: false
       t.integer :status, default: 1
       t.string :ats_link
-      t.references :point_of_contact, null: false, foreign_key: true
+      t.references :recruiter, null: false, foreign_key: true
 
       t.timestamps
     end

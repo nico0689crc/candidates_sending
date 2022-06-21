@@ -28,10 +28,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_171710) do
     t.text "description", null: false
     t.integer "status", default: 1
     t.string "ats_link"
-    t.bigint "point_of_contact_id", null: false
+    t.bigint "recruiter_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["point_of_contact_id"], name: "index_jobs_on_point_of_contact_id"
+    t.index ["recruiter_id"], name: "index_jobs_on_recruiter_id"
   end
 
   create_table "pipeline_steps", force: :cascade do |t|
@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_171710) do
     t.index ["job_id"], name: "index_pipeline_steps_on_job_id"
   end
 
-  create_table "point_of_contacts", force: :cascade do |t|
+  create_table "recruiters", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "profile_picture_url"
@@ -62,6 +62,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_171710) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "jobs", "point_of_contacts"
+  add_foreign_key "jobs", "recruiters"
   add_foreign_key "pipeline_steps", "jobs"
 end

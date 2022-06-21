@@ -1,10 +1,10 @@
-<%= form_with(model: @point_of_contact, url: @point_of_contact.new_record? ? admin_point_of_contacts_path : admin_point_of_contact_path(@point_of_contact)) do |form| %>
-  <% if @point_of_contact.errors.any? %>
+<%= form_with(model: @recruiter, url: @recruiter.new_record? ? admin_recruiters_path : admin_recruiter_path(@recruiter)) do |form| %>
+  <% if @recruiter.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(@point_of_contact.errors.count, "error") %> prohibited this @point_of_contact from being saved:</h2>
+      <h2><%= pluralize(@recruiter.errors.count, "error") %> prohibited this @recruiter from being saved:</h2>
 
       <ul>
-        <% @point_of_contact.errors.each do |error| %>
+        <% @recruiter.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -22,13 +22,13 @@
   </div>
 
   <div>
-    <%= form.label :contact_email, style: "display: block" %>
-    <%= form.text_field :contact_email %>
+    <%= form.label :profile_picture_url, style: "display: block" %>
+    <%= form.text_field :profile_picture_url %>
   </div>
 
   <div>
-    <%= form.label :profile_picture_url, style: "display: block" %>
-    <%= form.text_field :profile_picture_url %>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.check_box :status %>
   </div>
 
   <div>
@@ -39,6 +39,11 @@
   <div>
     <%= form.label :company_name, style: "display: block" %>
     <%= form.text_field :company_name %>
+  </div>
+
+  <div>
+    <%= form.label :contact_email, style: "display: block" %>
+    <%= form.text_field :contact_email %>
   </div>
 
   <div>

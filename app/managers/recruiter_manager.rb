@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class PointOfContactManager
+class RecruiterManager
   attr_reader :object
 
   def initialize(params: nil, object: nil)
@@ -9,11 +7,11 @@ class PointOfContactManager
   end
 
   def build
-    PointOfContact.new
+    Recruiter.new
   end
 
   def create
-    @object = PointOfContact.new(object_params)
+    @object = Recruiter.new(object_params)
     @object.save
   end
 
@@ -28,7 +26,7 @@ class PointOfContactManager
   private
 
   def object_params
-    @params.require(:point_of_contact).permit(permitted_params)
+    @params.require(:recruiter).permit(permitted_params)
   end
 
   def permitted_params

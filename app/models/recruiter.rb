@@ -1,4 +1,4 @@
-class PointOfContact < ApplicationRecord
+class Recruiter < ApplicationRecord
     #--------------------------------------------- RELATIONSHIPS
 
     #--------------------------------------------- VALIDATIONS
