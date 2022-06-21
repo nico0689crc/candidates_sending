@@ -10,9 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_20_171025) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_21_105102) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description", null: false
+    t.integer "status", default: 1
+    t.string "ats_link"
+    t.bigint "point_of_contact_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["point_of_contact_id"], name: "index_jobs_on_point_of_contact_id"
+  end
 
   create_table "point_of_contacts", force: :cascade do |t|
     t.string "first_name", null: false
@@ -28,4 +39,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_20_171025) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "jobs", "point_of_contacts"
 end
