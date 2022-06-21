@@ -53,3 +53,77 @@ Job.create([{
     ats_link: "http://gekarucu.kh/cuhu",
     point_of_contact_id: 3
 }])
+
+PipelineStep.create([{
+    name: "Pipeline Step 1",
+    description: "Quis labore culpa proident nulla nostrud officia amet dolore. Exercitation velit culpa voluptate ipsum laborum occaecat ut excepteur occaecat ipsum labore adipisicing est. Occaecat tempor cillum pariatur ea ea excepteur officia excepteur.",
+    teaser: "Excepteur irure quis aliquip esse irure reprehenderit qui pariatur tempor pariatur amet velit.",
+    action_button_label: "dark",
+    action_button_url: "http://tom.im/leroc",
+    order: 1,
+    job_id: 1
+},{
+    name: "Pipeline Step 2",
+    description: "Id eu esse labore eu quis. Aliqua ut minim sunt elit sit proident consectetur. Quis reprehenderit et amet irure culpa ipsum est deserunt aute cupidatat. Reprehenderit reprehenderit minim minim voluptate anim anim labore ut amet minim ut eiusmod. Ex ut officia id magna labore eu duis. Adipisicing sit do aliquip commodo et do anim velit ex amet sunt dolor. Cupidatat eiusmod id qui velit incididunt.",
+    teaser: "Laborum ex ex incididunt tempor cillum officia officia est qui cillum sit cupidatat cillum.",
+    action_button_label: "memory",
+    action_button_url: "http://ded.sj/bev",
+    order: 2,
+    job_id: 1
+},{
+    name: "Pipeline Step 3",
+    description: "Ipsum officia anim tempor eiusmod nulla laboris aute excepteur mollit pariatur. Amet incididunt exercitation occaecat cupidatat occaecat. Mollit consequat ut duis culpa dolor incididunt irure proident in culpa ad. Ut culpa cupidatat Lorem et pariatur ipsum nulla adipisicing id qui.",
+    teaser: "Et dolor enim ipsum qui dolore Lorem nisi culpa non ad et.",
+    action_button_label: "warn",
+    action_button_url: "http://bo.su/awapowar",
+    order: 3,
+    job_id: 1
+},{
+    name: "Pipeline Step 1",
+    description: "Enim do non aliqua ex laborum tempor aliquip ipsum nulla cillum exercitation labore tempor. Veniam proident esse occaecat fugiat sunt laboris veniam. Pariatur excepteur velit reprehenderit cillum id duis deserunt nisi fugiat amet. Consectetur laboris minim laborum velit ea irure aliqua duis et mollit.",
+    teaser: "Velit reprehenderit adipisicing consectetur cupidatat mollit excepteur aliqua voluptate aute.",
+    action_button_label: "arrangement",
+    action_button_url: "http://zak.no/pukzekev",
+    order: 1,
+    job_id: 2
+},{
+    name: "Pipeline Step 2",
+    description: "Nulla minim adipisicing esse eu pariatur. Esse ipsum mollit velit occaecat amet officia. Laborum mollit voluptate adipisicing sunt.",
+    teaser: "Dolore duis ipsum anim ex adipisicing dolor enim dolore.",
+    action_button_label: "may",
+    action_button_url: "http://bemofe.bs/vugzegad",
+    order: 2,
+    job_id: 2
+},{
+    name: "Pipeline Step 1",
+    description: "Reprehenderit in nostrud elit aliqua nisi quis nulla mollit quis consectetur. Anim cupidatat occaecat ad aute pariatur. Aute cillum reprehenderit id mollit exercitation dolore ullamco.",
+    teaser: "Laboris veniam voluptate aliquip veniam nisi consequat dolore eu.",
+    action_button_label: "roof",
+    action_button_url: "http://nem.kh/kiz",
+    order: 1,
+    job_id: 3
+},{
+    name: "Pipeline Step 2",
+    description: "Excepteur ex est incididunt minim dolore commodo. Elit ex eu ea amet culpa. Nulla ad officia irure sint veniam ex.",
+    teaser: "Elit mollit ipsum laboris dolor.",
+    action_button_label: "stood",
+    action_button_url: "http://tev.jm/jednegab",
+    order: 2,
+    job_id: 3
+},{
+    name: "Pipeline Step 3",
+    description: "Nulla aute in aute est eiusmod consectetur sit. Velit mollit voluptate nulla anim dolor occaecat magna nisi officia incididunt deserunt nisi. Nostrud deserunt et aute incididunt qui ullamco nisi tempor deserunt et quis esse consectetur. Occaecat eiusmod Lorem minim sunt occaecat non proident voluptate quis labore incididunt ipsum esse.",
+    teaser: "Dolore amet esse non occaecat laboris eiusmod cillum pariatur cupidatat aliqua.",
+    action_button_label: "shinning",
+    action_button_url: "http://tikopog.ki/mufva",
+    order: 3,
+    job_id: 3
+},{
+    name: "Pipeline Step 4",
+    description: "Veniam aute quis excepteur irure pariatur irure consequat adipisicing sint quis ut. Do sunt dolore ex occaecat do cupidatat occaecat aute ex. Minim mollit voluptate aliquip nisi consectetur eu.",
+    teaser: "Nisi aliquip culpa ea Lorem Lorem.",
+    action_button_label: "however",
+    action_button_url: "http://hul.ph/cazlo",
+    order: 4,
+    job_id: 3
+}])

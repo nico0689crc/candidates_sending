@@ -1,0 +1,10 @@
+<h1>Editing pipeline step</h1>
+
+<%= render "form", pipeline_step: @pipeline_step %>
+
+<br>
+
+<div>
+  <%= link_to "Show this pipeline step", admin_pipeline_step_path(@pipeline_step) %> |
+  <%= link_to "Back to pipeline steps", admin_pipeline_steps_path %>
+</div>

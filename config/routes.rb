@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pipeline_steps
   
   
   
@@ -8,11 +9,13 @@ namespace :admin do
       namespace :v1 do
         resources :point_of_contacts
         resources :jobs
+        resources :pipeline_steps
       end
     end
 
     resources :point_of_contacts
     resources :jobs
+    resources :pipeline_steps
 end
 
 
