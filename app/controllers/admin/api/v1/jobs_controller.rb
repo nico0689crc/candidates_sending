@@ -21,7 +21,7 @@ module Api
 
         if job_manager.create
           job = job_manager.object.decorate
-          json_response(message: I18n.t(:success, scope: %i[messages create]), data: JobSerializer.new(product), status: :created)
+          json_response(message: I18n.t(:success, scope: %i[messages create]), data: JobSerializer.new(job), status: :created)
         else
           json_response(message: I18n.t(:error, scope: %i[messages create]), data: job_manager.object.errors, status: :unprocessable_entity)
         end

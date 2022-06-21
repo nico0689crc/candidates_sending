@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_21_105102) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_21_135308) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_105102) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["point_of_contact_id"], name: "index_jobs_on_point_of_contact_id"
+  end
+
+  create_table "pipeline_steps", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.text "teaser", null: false
+    t.string "action_button_label"
+    t.string "action_button_url"
+    t.integer "order"
+    t.integer "status", default: 1
+    t.bigint "job_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_pipeline_steps_on_job_id"
   end
 
   create_table "point_of_contacts", force: :cascade do |t|
@@ -40,4 +54,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_105102) do
   end
 
   add_foreign_key "jobs", "point_of_contacts"
+  add_foreign_key "pipeline_steps", "jobs"
 end

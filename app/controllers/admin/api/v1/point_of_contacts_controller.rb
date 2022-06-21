@@ -22,7 +22,7 @@ module Api
 
         if point_of_contact_manager.create
           point_of_contact = point_of_contact_manager.object.decorate
-          json_response(message: I18n.t(:success, scope: %i[messages create]), data: PointOfContactSerializer.new(product), status: :created)
+          json_response(message: I18n.t(:success, scope: %i[messages create]), data: PointOfContactSerializer.new(point_of_contact), status: :created)
         else
           json_response(message: I18n.t(:error, scope: %i[messages create]), data: point_of_contact_manager.object.errors, status: :unprocessable_entity)
         end
