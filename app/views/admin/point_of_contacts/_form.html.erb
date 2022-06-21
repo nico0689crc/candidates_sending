@@ -1,4 +1,4 @@
-<%= form_with(model: @point_of_contact, url: admin_point_of_contacts_path) do |form| %>
+<%= form_with(model: @point_of_contact, url: @point_of_contact.new_record? ? admin_point_of_contacts_path : admin_point_of_contact_path(@point_of_contact)) do |form| %>
   <% if @point_of_contact.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(@point_of_contact.errors.count, "error") %> prohibited this @point_of_contact from being saved:</h2>

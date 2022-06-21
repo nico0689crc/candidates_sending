@@ -2,7 +2,7 @@
 module Api
   module V1
     class Admin::Api::V1::PointOfContactsController < ApiController
-      before_action :set_product, only: %i[show edit update destroy]
+      before_action :point_of_contact, only: %i[show edit update destroy]
 
       # GET api/v1/point_of_contacts
       def index
@@ -53,7 +53,7 @@ module Api
       private
 
       # Use callbacks to share common setup or constraints between actions.
-      def set_product
+      def point_of_contact
         @point_of_contact = PointOfContact.find(params[:id])
       end
     end

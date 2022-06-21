@@ -40,7 +40,7 @@ module Admin
       point_of_contact_manager = PointOfContactManager.new(params: params, object: @point_of_contact)
 
       if point_of_contact_manager.update
-        redirect_to admin_point_of_contact_managers_url, notice: "Point of contact was successfully updated."
+        redirect_to admin_point_of_contacts_url, notice: "Point of contact was successfully updated."
       else
         @point_of_contact = point_of_contact_manager.object
         flash.now[:error] = "Point of contact could not update."
@@ -54,10 +54,10 @@ module Admin
 
       if point_of_contact_manager.destroy
         flash[:notice] = "Point of contact was successfully destroyed."
-        redirect_to admin_point_of_contact_managers_url
+        redirect_to admin_point_of_contacts_url
       else
         flash[:error] = "Point of contact could not destroy."
-        redirect_to admin_point_of_contact_managers_url
+        redirect_to admin_point_of_contacts_url
       end
     end
 
