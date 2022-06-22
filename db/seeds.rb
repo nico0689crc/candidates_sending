@@ -128,24 +128,129 @@ PipelineStep.create([{
     job_id: 3
 }])
 
-Candidate.create([{
-    first_name: "Carlos",
-    last_name: "Burgess",
-    contact_email: "nulo@kehhi.am",
-    contact_linked_in: "http://ek.gt/zuwaj"
+candidates_array = []
+30.times do
+    candidates_array.push({
+        first_name: Faker::Name.first_name,
+        last_name: Faker::Name.last_name,
+        contact_email: Faker::Internet.email,
+        contact_linked_in: Faker::Internet.url
+    })
+end 
+
+Candidate.create(candidates_array)
+
+JobsCandidate.create([{
+    job_id: 1,
+    candidate_id: 1,
+    token: Faker::Internet.uuid
 },{
-    first_name: "Warren",
-    last_name: "Dunn",
-    contact_email: "ges@za.mp",
-    contact_linked_in: "http://lahpojow.sk/kukgajbeb"
+    job_id: 1,
+    candidate_id: 2,
+    token: Faker::Internet.uuid
 },{
-    first_name: "Calvin",
-    last_name: "Lindsey",
-    contact_email: "zevunij@mamordod.sd",
-    contact_linked_in: "http://dabmah.sk/pi"
+    job_id: 1,
+    candidate_id: 3,
+    token: Faker::Internet.uuid
 },{
-    first_name: "Lily",
-    last_name: "Coleman",
-    contact_email: "lifkuf@putupbec.am",
-    contact_linked_in: "http://togfokej.gov/op"
-},])
+    job_id: 1,
+    candidate_id: 4,
+    token: Faker::Internet.uuid
+},{
+    job_id: 1,
+    candidate_id: 5,
+    token: Faker::Internet.uuid
+},{
+    job_id: 1,
+    candidate_id: 6,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 6,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 7,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 8,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 9,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 10,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 11,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 12,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 13,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 14,
+    token: Faker::Internet.uuid
+},{
+    job_id: 2,
+    candidate_id: 15,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 16,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 17,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 18,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 19,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 20,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 21,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 22,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 23,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 24,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 25,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 26,
+    token: Faker::Internet.uuid
+},{
+    job_id: 3,
+    candidate_id: 27,
+    token: Faker::Internet.uuid
+}
+])
