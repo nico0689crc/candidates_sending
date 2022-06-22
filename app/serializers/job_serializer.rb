@@ -3,4 +3,5 @@ class JobSerializer < ActiveModel::Serializer
   
   has_one :recruiter
   has_many :pipeline_steps
+  has_many :jobs_candidates, serializer: JobsCandidateSerializer, key: :candidates
 end

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Jobs candidates</h1>
+
+<div id="jobs_candidates">
+  <% @presenter.jobs_candidates.each do |jobs_candidate| %>
+    <%= render jobs_candidate %>
+    <p>
+      <%= link_to "Show this jobs candidate", admin_jobs_candidate_path(jobs_candidate) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New jobs candidate", new_admin_jobs_candidate_path %>

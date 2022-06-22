@@ -8,6 +8,7 @@ namespace :admin do
         resources :jobs
         resources :pipeline_steps
         resources :candidates
+        resources :jobs_candidates, only: [:show, :create, :destroy]
       end
     end
 
@@ -15,6 +16,7 @@ namespace :admin do
     resources :jobs
     resources :pipeline_steps
     resources :candidates
+    resources :jobs_candidates, only: [:show, :create, :destroy]
 end
 
 # Defines the root path route ("/")
