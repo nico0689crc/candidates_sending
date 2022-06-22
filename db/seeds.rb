@@ -8,34 +8,24 @@
 
 DatabaseCleaner.clean_with :truncation
 
-Recruiter.create([{
-    first_name: "Logan",
-    last_name: "Griffith",
-    profile_picture_url: "https://img.buzzfeed.com/buzzfeed-static/static/2022-05/11/14/asset/82ea240a9e12/sub-buzz-2936-1652280422-21.jpg",
-    role: "Recruiter",
-    company_name: "ITCROWDARG",
-    contact_email: "evpes@af.gy",
-    contact_linked_in: "http://bospekwuf.br/linmames",
-    contact_whatsapp: "+5491164182821"
-},{
-    first_name: "Barry",
-    last_name: "Alexander",
-    profile_picture_url: "https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg",
-    role: "Recruiter",
-    company_name: "ITCROWDARG",
-    contact_email: "owa@hokudoh.ao",
-    contact_linked_in: "http://tolavki.at/uh",
-    contact_whatsapp: "+5491164182821"
-},{
-    first_name: "John",
-    last_name: "Sanchez",
-    profile_picture_url: "https://img.freepik.com/free-photo/pleasant-looking-serious-man-stands-profile-has-confident-expression-wears-casual-white-t-shirt_273609-16959.jpg",
-    role: "Recruiter",
-    company_name: "ITCROWDARG",
-    contact_email: "john@hokudoh.ao",
-    contact_linked_in: "http://tolavki.at/uh",
-    contact_whatsapp: "+5491164182821"
-}])
+####### RECRUITERS SEEDING - START #######
+    recruiters_array = []
+
+    25.times do
+        recruiters_array.push({
+            first_name: Faker::Name.first_name,
+            last_name: Faker::Name.last_name,
+            profile_picture_url: Faker::Avatar.image,
+            role: Faker::Job.position,
+            company_name: "ITCROWDARG",
+            contact_email: Faker::Internet.email,
+            contact_linked_in: Faker::Internet.url,
+            contact_whatsapp: Faker::PhoneNumber.cell_phone_in_e164
+        })
+    end 
+
+    Recruiter.create(recruiters_array)
+####### RECRUITERS SEEDING - END #######
 
 Job.create([{
     title: "Velit eu nostrud reprehenderit",
@@ -128,17 +118,20 @@ PipelineStep.create([{
     job_id: 3
 }])
 
-candidates_array = []
-30.times do
-    candidates_array.push({
-        first_name: Faker::Name.first_name,
-        last_name: Faker::Name.last_name,
-        contact_email: Faker::Internet.email,
-        contact_linked_in: Faker::Internet.url
-    })
-end 
+####### CANDIDATES SEEDING - START #######
+    candidates_array = []
 
-Candidate.create(candidates_array)
+    30.times do
+        candidates_array.push({
+            first_name: Faker::Name.first_name,
+            last_name: Faker::Name.last_name,
+            contact_email: Faker::Internet.email,
+            contact_linked_in: Faker::Internet.url
+        })
+    end 
+
+    Candidate.create(candidates_array)
+####### CANDIDATES SEEDING - END #######
 
 JobsCandidate.create([{
     job_id: 1,
@@ -252,5 +245,4 @@ JobsCandidate.create([{
     job_id: 3,
     candidate_id: 27,
     token: Faker::Internet.uuid
-}
-])
+}])
