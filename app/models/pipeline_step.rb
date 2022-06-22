@@ -1,6 +1,7 @@
 class PipelineStep < ApplicationRecord
   #--------------------------------------------- RELATIONSHIPS
     belongs_to :job
+    has_many :jobs_candidates_pipelines
   #--------------------------------------------- VALIDATIONS
     validates :name, presence: true, length: { minimum: 10 }
     validates :description, presence: true, length: { minimum: 100 }

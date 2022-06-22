@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_21_210833) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_22_011807) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,6 +46,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_210833) do
     t.index ["job_id"], name: "index_jobs_candidates_on_job_id"
   end
 
+  create_table "jobs_candidates_pipelines", force: :cascade do |t|
+    t.bigint "jobs_candidate_id", null: false
+    t.bigint "pipeline_step_id", null: false
+    t.boolean "completed", default: false
+    t.text "feedback"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["jobs_candidate_id"], name: "index_jobs_candidates_pipelines_on_jobs_candidate_id"
+    t.index ["pipeline_step_id"], name: "index_jobs_candidates_pipelines_on_pipeline_step_id"
+  end
+
   create_table "pipeline_steps", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
@@ -77,5 +88,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_210833) do
   add_foreign_key "jobs", "recruiters"
   add_foreign_key "jobs_candidates", "candidates"
   add_foreign_key "jobs_candidates", "jobs"
+  add_foreign_key "jobs_candidates_pipelines", "jobs_candidates"
+  add_foreign_key "jobs_candidates_pipelines", "pipeline_steps"
   add_foreign_key "pipeline_steps", "jobs"
 end
