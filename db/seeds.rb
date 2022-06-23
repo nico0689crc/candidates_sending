@@ -136,113 +136,113 @@ PipelineStep.create([{
 JobsCandidate.create([{
     job_id: 1,
     candidate_id: 1,
-    token: Faker::Internet.uuid
+    token: "4bb28445-1abd-5024-b322-76ef72f64cbc"
 },{
     job_id: 1,
     candidate_id: 2,
-    token: Faker::Internet.uuid
+    token: "5896a18f-a38c-58bf-8a85-e44408a2f422"
 },{
     job_id: 1,
     candidate_id: 3,
-    token: Faker::Internet.uuid
+    token: "62813f20-f1f6-57e4-b2fd-b66e6ddeaace"
 },{
     job_id: 1,
     candidate_id: 4,
-    token: Faker::Internet.uuid
+    token: "fe7072f5-c7e4-5b93-b3ed-82b09adc0bca"
 },{
     job_id: 1,
     candidate_id: 5,
-    token: Faker::Internet.uuid
+    token: "e3f3fff5-9623-5ed5-8236-d13e2835c741"
 },{
     job_id: 1,
     candidate_id: 6,
-    token: Faker::Internet.uuid
+    token: "ecbcbd32-d355-5168-899c-7796d53621e2"
 },{
     job_id: 2,
     candidate_id: 6,
-    token: Faker::Internet.uuid
+    token: "6cc95369-8a3d-5ebf-9eda-888c1d827161"
 },{
     job_id: 2,
     candidate_id: 7,
-    token: Faker::Internet.uuid
+    token: "9adbb082-9c4c-531e-b3e7-32baea4a2ae9"
 },{
     job_id: 2,
     candidate_id: 8,
-    token: Faker::Internet.uuid
+    token: "3cfed367-4735-5082-857e-6bdc6325a663"
 },{
     job_id: 2,
     candidate_id: 9,
-    token: Faker::Internet.uuid
+    token: "09798d24-ee65-583f-8764-ddc9384c3228"
 },{
     job_id: 2,
     candidate_id: 10,
-    token: Faker::Internet.uuid
+    token: "8ed31226-3b01-5ec8-8445-522d3609adb4"
 },{
     job_id: 2,
     candidate_id: 11,
-    token: Faker::Internet.uuid
+    token: "365ecf05-e362-5dd3-aecb-bf7297c2b5b4"
 },{
     job_id: 2,
     candidate_id: 12,
-    token: Faker::Internet.uuid
+    token: "7c7d2976-84ea-5320-8844-1ce23d488dc7"
 },{
     job_id: 2,
     candidate_id: 13,
-    token: Faker::Internet.uuid
+    token: "3038be79-45a7-5ce4-b33c-cb1e7790f56a"
 },{
     job_id: 2,
     candidate_id: 14,
-    token: Faker::Internet.uuid
+    token: "4b940f14-0726-5a7d-8011-0a18a30f0e4c"
 },{
     job_id: 2,
     candidate_id: 15,
-    token: Faker::Internet.uuid
+    token: "49176a55-1c29-5db4-80a1-0485475b5b63"
 },{
     job_id: 3,
     candidate_id: 16,
-    token: Faker::Internet.uuid
+    token: "d228d4fa-a155-5794-8b87-4d84804efff2"
 },{
     job_id: 3,
     candidate_id: 17,
-    token: Faker::Internet.uuid
+    token: "a018924d-c922-5ea0-b73c-b3d0d497fad0"
 },{
     job_id: 3,
     candidate_id: 18,
-    token: Faker::Internet.uuid
+    token: "6acd6eeb-44cb-571d-8389-dcca928df831"
 },{
     job_id: 3,
     candidate_id: 19,
-    token: Faker::Internet.uuid
+    token: "8d0cc96c-a49b-5067-b931-64f2e7c9ab64"
 },{
     job_id: 3,
     candidate_id: 20,
-    token: Faker::Internet.uuid
+    token: "5f0d9014-d097-52ca-962b-a0b55107cf5c"
 },{
     job_id: 3,
     candidate_id: 21,
-    token: Faker::Internet.uuid
+    token: "9d596c55-5783-597b-9214-d2a2924ada2b"
 },{
     job_id: 3,
     candidate_id: 22,
-    token: Faker::Internet.uuid
+    token: "a2019538-e097-549c-b6b5-b6c337b8b7ea"
 },{
     job_id: 3,
     candidate_id: 23,
-    token: Faker::Internet.uuid
+    token: "b02de679-1d81-5837-9323-e4703acb2376"
 },{
     job_id: 3,
     candidate_id: 24,
-    token: Faker::Internet.uuid
+    token: "9c17044a-222d-51cd-8a5f-99c38001d362"
 },{
     job_id: 3,
     candidate_id: 25,
-    token: Faker::Internet.uuid
+    token: "cfa40d17-18a1-5d50-b76f-0a3870f552f9"
 },{
     job_id: 3,
     candidate_id: 26,
-    token: Faker::Internet.uuid
+    token: "af0fc20f-22d4-5359-b8e8-ff048caa97ae"
 },{
     job_id: 3,
     candidate_id: 27,
-    token: Faker::Internet.uuid
+    token: "cbdb0196-d398-5712-8682-69aa235f53d0"
 }])
