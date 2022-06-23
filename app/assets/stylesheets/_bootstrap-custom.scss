@@ -1,7 +1,7 @@
 // scss-docs-start theme-color-variables
-$primary: #30df81;
-$primary-light: #35fd8c9c;
-$primary-dark: #197f48;
+$primary: #30DF7E;
+$primary-light: #B3FFCD;
+$primary-dark: #20B670;
 // scss-docs-end theme-color-variables
 
 @import "bootstrap/_functions";
@@ -12,7 +12,7 @@ $custom-colors: (
   "primary": $primary,
   "primary-light": $primary-light,
   "primary-dark": $primary-dark,
-  "blue": #0d6efd,
+  "blue": #0d6efd
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
