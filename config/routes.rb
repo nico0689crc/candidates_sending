@@ -23,4 +23,6 @@ end
 
 # Defines the root path route ("/")
 # root "articles#index"
+get 'postulation/:token', to: 'candidates_experiences#index'
+
 end

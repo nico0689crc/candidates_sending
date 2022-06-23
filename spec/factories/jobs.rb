@@ -4,6 +4,6 @@ FactoryBot.define do
     description { "MyText" }
     status { 1 }
     ats_link { "MyString" }
-    point_of_contact { nil }
+    recruiter_id { nil }
   end
 end
